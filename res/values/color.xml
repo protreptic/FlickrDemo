@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <color name="bg_actionbar">#6ba9cd</color>
+     <color name="selected_caption1">#797a79</color>
+     <color name="light_gray">#dfdfdf</color>
+     
+     <color name="flickr1">#ff0084</color>
+     <color name="flickr2">#0063db</color>
+     
+     <color name="blue_light">#ff33b5e5</color>
+     <color name="blue_bright">#5500ddff</color>
+     <color name="flickr_bright">#55ff0084</color>
+     
+     <color name="black">#000000</color>
+     <color name="white">#ffffff</color>
+     <color name="red">#e31e25</color>
+     <color name="yellow">#fdb913</color>
+     <color name="green">#4DA317</color>
+     <color name="green_light">#8BC798</color>
+     <color name="red_light">#EDC7CE</color>
+</resources>

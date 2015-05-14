@@ -1,0 +1,6 @@
+/gen
+/bin
+/assets/*.lock.db
+/assets/*.trace.db
+**/*~
+/project.properties

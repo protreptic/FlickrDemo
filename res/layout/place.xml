@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_selector"
+    android:clickable="true"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/light_gray"
+        android:contentDescription="@string/contentDescription"
+        android:minHeight="150dp"
+        android:padding="1dp"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userAvatar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/userAvatar"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:text="@string/title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/selected_caption1" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/title"
+        android:layout_alignRight="@+id/userAvatar"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/compact_camera19"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="123"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/selected_caption1" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userAvatar"
+        android:layout_alignTop="@+id/userAvatar"
+        android:layout_margin="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minWidth="40dp"
+        android:padding="3dp"
+        android:text="123"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/selected_caption1" />
+
+</RelativeLayout>
