@@ -25,7 +25,7 @@ import com.googlecode.flickrjandroid.places.PlacesList;
 import com.j256.ormlite.dao.Dao;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-public class UserPhotostreamFragment extends BaseEntityListFragment<Photo> {
+public class PhotostreamFragment extends BaseEntityListFragment<Photo> {
 
 	@Override
 	protected Adapter<?> createAdapter() {
