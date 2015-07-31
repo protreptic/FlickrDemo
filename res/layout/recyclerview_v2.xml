@@ -29,39 +29,6 @@
         android:layout_gravity="end"
         android:background="#ffffff" >
 
-        <ListView
-            android:id="@+id/listView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/signInButton"
-            android:layout_alignParentTop="true" >
-        </ListView>
-
-        <TextView
-            android:id="@+id/signInButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/card_selector"
-            android:clickable="true"
-            android:padding="18dp"
-            android:text="ПОКАЗАТЬ"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/flickr1" />
-
-        <TextView
-            android:id="@+id/TextView01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/signInButton"
-            android:background="@drawable/card_selector"
-            android:clickable="true"
-            android:padding="18dp"
-            android:text="ОЧИСТИТЬ"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/flickr2" />
     </RelativeLayout>
 
 </android.support.v4.widget.DrawerLayout>

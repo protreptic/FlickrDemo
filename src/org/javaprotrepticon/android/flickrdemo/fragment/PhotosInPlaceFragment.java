@@ -1,15 +1,14 @@
-package skbkonturcontest.flickr.fragment;
+package org.javaprotrepticon.android.flickrdemo.fragment;
 
 import java.sql.SQLException;
 import java.util.Set;
 import java.util.TreeSet;
 
-import skbkonturcontest.flickr.fragment.base.BaseEntityListFragment;
-import skbkonturcontest.flickr.storage.Storage;
-import skbkonturcontest.flickr.storage.model.Photo;
-import skbkonturcontest.flickr.util.FlickrUtils;
-import android.content.Intent;
-import android.net.Uri;
+import org.javaprotrepticon.android.flickrdemo.fragment.base.BaseEntityListFragment;
+import org.javaprotrepticon.android.flickrdemo.storage.Storage;
+import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
+import org.javaprotrepticon.android.flickrdemo.util.FlickrUtils;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView.Adapter;
@@ -51,7 +50,7 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
 				holder.userName.setText(photo.getOwnerName());
 				holder.userName.setTypeface(mRobotoCondensedRegular);
 				
-				holder.views.setText(skbkonturcontest.flickr.util.TextUtils.formatPhotoCount(photo.getViews()));
+				holder.views.setText(org.javaprotrepticon.android.flickrdemo.util.TextUtils.formatPhotoCount(photo.getViews()));
 				holder.views.setTypeface(mRobotoCondensedRegular);
 				
 //				if (!TextUtils.isEmpty(photo.getDescription())) { 
@@ -71,10 +70,7 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
 					
 					@Override
 					public void onClick(View arg0) {
-						Intent intent = new Intent(Intent.ACTION_VIEW); 
-						intent.setDataAndType(Uri.parse("file://" + Uri.parse(url).getPath()), "image/*"); 
 						
- 						getActivity().startActivity(intent);
 					}
 				});
 			}  

@@ -1,7 +1,7 @@
-package skbkonturcontest.flickr.util;
+package org.javaprotrepticon.android.flickrdemo.util;
 
-import skbkonturcontest.flickr.R;
-import skbkonturcontest.flickr.storage.model.Photo;
+import org.javaprotrepticon.android.flickrdemo.R;
+import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
 
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;

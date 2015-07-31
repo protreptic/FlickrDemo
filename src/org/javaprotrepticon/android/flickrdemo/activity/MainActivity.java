@@ -1,11 +1,12 @@
-package skbkonturcontest.flickr.activity;
+package org.javaprotrepticon.android.flickrdemo.activity;
 
 import java.io.IOException;
 
-import skbkonturcontest.flickr.R;
-import skbkonturcontest.flickr.fragment.TopPlacesListFragment;
-import skbkonturcontest.flickr.task.OAuthTask;
-import skbkonturcontest.flickr.util.FlickrUtils;
+import org.javaprotrepticon.android.flickrdemo.R;
+import org.javaprotrepticon.android.flickrdemo.fragment.TopPlacesListFragment;
+import org.javaprotrepticon.android.flickrdemo.task.OAuthTask;
+import org.javaprotrepticon.android.flickrdemo.util.FlickrUtils;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;

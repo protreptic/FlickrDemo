@@ -1,4 +1,4 @@
-package skbkonturcontest.flickr;
+package org.javaprotrepticon.android.flickrdemo;
 
 import android.app.Application;
 

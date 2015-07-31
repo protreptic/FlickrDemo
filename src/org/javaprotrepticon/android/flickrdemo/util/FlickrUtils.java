@@ -1,4 +1,4 @@
-package skbkonturcontest.flickr.util;
+package org.javaprotrepticon.android.flickrdemo.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -1,4 +1,4 @@
-package skbkonturcontest.flickr.fragment.base;
+package org.javaprotrepticon.android.flickrdemo.fragment.base;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Locale;
 
 import org.javaprotrepticon.android.androidutils.Fonts;
+import org.javaprotrepticon.android.flickrdemo.R;
+import org.javaprotrepticon.android.flickrdemo.storage.Storage;
 
-import skbkonturcontest.flickr.R;
-import skbkonturcontest.flickr.storage.Storage;
 import android.accounts.Account;
 import android.content.res.Configuration;
 import android.graphics.Typeface;

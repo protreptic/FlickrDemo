@@ -1,4 +1,4 @@
-package skbkonturcontest.flickr.util;
+package org.javaprotrepticon.android.flickrdemo.util;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -7,8 +7,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-import skbkonturcontest.flickr.storage.Storage;
-import skbkonturcontest.flickr.storage.model.Photo;
+import org.javaprotrepticon.android.flickrdemo.storage.Storage;
+import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
+
 import android.content.Context;
 import android.os.AsyncTask;
 

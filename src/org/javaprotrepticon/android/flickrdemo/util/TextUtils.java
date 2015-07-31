@@ -1,4 +1,4 @@
-package skbkonturcontest.flickr.util;
+package org.javaprotrepticon.android.flickrdemo.util;
 
 public class TextUtils {
 	public static String formatPhotoCount(Integer count) {

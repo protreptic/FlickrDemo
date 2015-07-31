@@ -1,7 +1,8 @@
-package skbkonturcontest.flickr.activity;
+package org.javaprotrepticon.android.flickrdemo.activity;
 
-import skbkonturcontest.flickr.R;
-import skbkonturcontest.flickr.storage.Storage;
+import org.javaprotrepticon.android.flickrdemo.R;
+import org.javaprotrepticon.android.flickrdemo.storage.Storage;
+
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;

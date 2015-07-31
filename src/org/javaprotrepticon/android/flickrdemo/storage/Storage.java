@@ -1,12 +1,12 @@
-package skbkonturcontest.flickr.storage;
+package org.javaprotrepticon.android.flickrdemo.storage;
 
 import java.io.File;
 import java.sql.SQLException;
 
 import org.javaprotrepticon.android.androidutils.Apps;
+import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
+import org.javaprotrepticon.android.flickrdemo.storage.model.Place;
 
-import skbkonturcontest.flickr.storage.model.Photo;
-import skbkonturcontest.flickr.storage.model.Place;
 import android.content.Context;
 
 import com.j256.ormlite.dao.Dao;

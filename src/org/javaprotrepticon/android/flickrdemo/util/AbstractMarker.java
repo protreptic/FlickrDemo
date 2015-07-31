@@ -1,4 +1,4 @@
-package skbkonturcontest.flickr.util;
+package org.javaprotrepticon.android.flickrdemo.util;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;

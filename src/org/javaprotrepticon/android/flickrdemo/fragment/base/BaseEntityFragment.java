@@ -1,8 +1,8 @@
-package skbkonturcontest.flickr.fragment.base;
+package org.javaprotrepticon.android.flickrdemo.fragment.base;
 
 import org.javaprotrepticon.android.androidutils.Fonts;
+import org.javaprotrepticon.android.flickrdemo.R;
 
-import skbkonturcontest.flickr.R;
 import android.accounts.Account;
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
