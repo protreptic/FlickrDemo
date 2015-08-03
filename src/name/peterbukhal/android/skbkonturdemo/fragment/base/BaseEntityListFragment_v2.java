@@ -1,13 +1,14 @@
-package org.javaprotrepticon.android.flickrdemo.fragment.base;
+package name.peterbukhal.android.skbkonturdemo.fragment.base;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+import name.peterbukhal.android.skbkonturdemo.R;
+import name.peterbukhal.android.skbkonturdemo.storage.Storage;
+
 import org.javaprotrepticon.android.androidutils.Fonts;
-import org.javaprotrepticon.android.flickrdemo.R;
-import org.javaprotrepticon.android.flickrdemo.storage.Storage;
 
 import android.accounts.Account;
 import android.content.res.Configuration;
@@ -32,7 +33,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.j256.ormlite.dao.Dao;
@@ -183,7 +183,7 @@ public abstract class BaseEntityListFragment_v2<T> extends Fragment implements O
 		inflater.inflate(R.menu.base_entity_list_fragment, menu);
 		
 		MenuItem menuItem = menu.findItem(R.id.actionSearch2);
-		menuItem.setIcon(getResources().getDrawable(R.drawable.search));
+		menuItem.setIcon(R.drawable.search);
 		 
 		SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.actionSearch2));
 	    searchView.setOnQueryTextListener(new OnQueryTextListener() {

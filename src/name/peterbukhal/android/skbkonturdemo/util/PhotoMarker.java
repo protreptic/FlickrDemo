@@ -1,7 +1,7 @@
-package org.javaprotrepticon.android.flickrdemo.util;
+package name.peterbukhal.android.skbkonturdemo.util;
 
-import org.javaprotrepticon.android.flickrdemo.R;
-import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
+import name.peterbukhal.android.skbkonturdemo.R;
+import name.peterbukhal.android.skbkonturdemo.storage.model.Photo;
 
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;

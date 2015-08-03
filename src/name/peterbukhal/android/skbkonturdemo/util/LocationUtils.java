@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo.util;
+package name.peterbukhal.android.skbkonturdemo.util;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -7,9 +7,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.javaprotrepticon.android.flickrdemo.storage.Storage;
-import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
-
+import name.peterbukhal.android.skbkonturdemo.storage.Storage;
+import name.peterbukhal.android.skbkonturdemo.storage.model.Photo;
 import android.content.Context;
 import android.os.AsyncTask;
 

@@ -1,13 +1,13 @@
-package org.javaprotrepticon.android.flickrdemo.fragment;
+package name.peterbukhal.android.skbkonturdemo.fragment;
 
 import java.sql.SQLException;
 import java.util.Locale;
 
-import org.javaprotrepticon.android.flickrdemo.R;
-import org.javaprotrepticon.android.flickrdemo.fragment.base.BaseEntityListFragment_v2;
-import org.javaprotrepticon.android.flickrdemo.storage.Storage;
-import org.javaprotrepticon.android.flickrdemo.storage.model.Place;
-import org.javaprotrepticon.android.flickrdemo.util.FlickrUtils;
+import name.peterbukhal.android.skbkonturdemo.R;
+import name.peterbukhal.android.skbkonturdemo.fragment.base.BaseEntityListFragment_v2;
+import name.peterbukhal.android.skbkonturdemo.storage.Storage;
+import name.peterbukhal.android.skbkonturdemo.storage.model.Place;
+
 import org.javaprotrepticon.util.gmsurl.GmsUrl;
 import org.javaprotrepticon.util.gmsurl.GmsUrl.MapType;
 import org.javaprotrepticon.util.gmsurl.GmsUrl.ScaleType;
@@ -17,23 +17,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.RecyclerView.Adapter;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import com.google.android.gms.plus.People.OrderBy;
 import com.googlecode.flickrjandroid.Flickr;
-import com.googlecode.flickrjandroid.RequestContext;
-import com.googlecode.flickrjandroid.oauth.OAuth;
-import com.googlecode.flickrjandroid.oauth.OAuthToken;
 import com.googlecode.flickrjandroid.places.PlacesList;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.Where;
@@ -116,10 +104,8 @@ public class TopPlacesListFragment extends BaseEntityListFragment_v2<Place> {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		
-		OAuth oauth = FlickrUtils.getOAuthToken(getActivity());
-		
 		if (mEntityList.isEmpty()) {
-			new LoadPhotostreamTask().execute(oauth);
+			new LoadTopPlacesListTask().execute();
 		}
 	}
 	
@@ -128,24 +114,11 @@ public class TopPlacesListFragment extends BaseEntityListFragment_v2<Place> {
 		return Place.class;
 	}
 	
-	public class LoadPhotostreamTask extends AsyncTask<OAuth, Void, PlacesList> {
+	public class LoadTopPlacesListTask extends AsyncTask<Void, Void, PlacesList> {
 
-		public Flickr getFlickrAuthed(String token, String secret) {
-			Flickr flick = FlickrUtils.getInstance();
-			
-            RequestContext requestContext = RequestContext.getRequestContext();
-            
-            OAuth auth = new OAuth();
-            auth.setToken(new OAuthToken(token, secret));
-            requestContext.setOAuth(auth);
-            
-            return flick;
-	    }
-		
         @Override
-        protected PlacesList doInBackground(OAuth... arg0) {
-        	OAuthToken token = arg0[0].getToken();
-            Flickr flick = getFlickrAuthed(token.getOauthToken(), token.getOauthTokenSecret());
+        protected PlacesList doInBackground(Void... arg0) {
+            Flickr flick = new Flickr("153f33703432b91f607afa5dc195c23d", "da16906b3ce5d5e2");
             
             try {
             	PlacesList places = flick.getPlacesInterface().getTopPlacesList(7, null, null, null);

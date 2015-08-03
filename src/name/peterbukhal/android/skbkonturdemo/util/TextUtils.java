@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo.util;
+package name.peterbukhal.android.skbkonturdemo.util;
 
 public class TextUtils {
 	public static String formatPhotoCount(Integer count) {

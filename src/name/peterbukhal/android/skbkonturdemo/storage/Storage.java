@@ -1,11 +1,12 @@
-package org.javaprotrepticon.android.flickrdemo.storage;
+package name.peterbukhal.android.skbkonturdemo.storage;
 
 import java.io.File;
 import java.sql.SQLException;
 
+import name.peterbukhal.android.skbkonturdemo.storage.model.Photo;
+import name.peterbukhal.android.skbkonturdemo.storage.model.Place;
+
 import org.javaprotrepticon.android.androidutils.Apps;
-import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
-import org.javaprotrepticon.android.flickrdemo.storage.model.Place;
 
 import android.content.Context;
 

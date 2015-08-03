@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo;
+package name.peterbukhal.android.skbkonturdemo;
 
 import android.app.Application;
 

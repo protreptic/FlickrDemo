@@ -1,8 +1,7 @@
-package org.javaprotrepticon.android.flickrdemo.activity;
+package name.peterbukhal.android.skbkonturdemo.activity;
 
-import org.javaprotrepticon.android.flickrdemo.R;
-import org.javaprotrepticon.android.flickrdemo.storage.Storage;
-
+import name.peterbukhal.android.skbkonturdemo.R;
+import name.peterbukhal.android.skbkonturdemo.storage.Storage;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;

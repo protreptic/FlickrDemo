@@ -1,7 +1,8 @@
-package org.javaprotrepticon.android.flickrdemo.fragment.base;
+package name.peterbukhal.android.skbkonturdemo.fragment.base;
+
+import name.peterbukhal.android.skbkonturdemo.R;
 
 import org.javaprotrepticon.android.androidutils.Fonts;
-import org.javaprotrepticon.android.flickrdemo.R;
 
 import android.accounts.Account;
 import android.annotation.SuppressLint;

@@ -1,9 +1,8 @@
-package org.javaprotrepticon.android.flickrdemo.task;
+package name.peterbukhal.android.skbkonturdemo.task;
 
 import java.io.IOException;
 
-import org.javaprotrepticon.android.flickrdemo.util.FlickrUtils;
-
+import name.peterbukhal.android.skbkonturdemo.util.FlickrUtils;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;

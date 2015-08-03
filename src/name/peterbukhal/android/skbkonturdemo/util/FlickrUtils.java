@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo.util;
+package name.peterbukhal.android.skbkonturdemo.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

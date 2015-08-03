@@ -1,29 +1,22 @@
-package org.javaprotrepticon.android.flickrdemo.fragment;
+package name.peterbukhal.android.skbkonturdemo.fragment;
 
 import java.sql.SQLException;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.javaprotrepticon.android.flickrdemo.fragment.base.BaseEntityListFragment;
-import org.javaprotrepticon.android.flickrdemo.storage.Storage;
-import org.javaprotrepticon.android.flickrdemo.storage.model.Photo;
-import org.javaprotrepticon.android.flickrdemo.util.FlickrUtils;
-
+import name.peterbukhal.android.skbkonturdemo.fragment.base.BaseEntityListFragment;
+import name.peterbukhal.android.skbkonturdemo.storage.Storage;
+import name.peterbukhal.android.skbkonturdemo.storage.model.Photo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.text.TextUtils;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.googlecode.flickrjandroid.Flickr;
-import com.googlecode.flickrjandroid.RequestContext;
-import com.googlecode.flickrjandroid.oauth.OAuth;
-import com.googlecode.flickrjandroid.oauth.OAuthToken;
 import com.googlecode.flickrjandroid.photos.PhotoList;
 import com.googlecode.flickrjandroid.photos.SearchParameters;
-import com.googlecode.flickrjandroid.places.PlacesList;
 import com.j256.ormlite.dao.Dao;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -50,7 +43,7 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
 				holder.userName.setText(photo.getOwnerName());
 				holder.userName.setTypeface(mRobotoCondensedRegular);
 				
-				holder.views.setText(org.javaprotrepticon.android.flickrdemo.util.TextUtils.formatPhotoCount(photo.getViews()));
+				holder.views.setText(name.peterbukhal.android.skbkonturdemo.util.TextUtils.formatPhotoCount(photo.getViews()));
 				holder.views.setTypeface(mRobotoCondensedRegular);
 				
 //				if (!TextUtils.isEmpty(photo.getDescription())) { 
@@ -79,18 +72,6 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int itemId = item.getItemId();
-		switch (itemId) {
-			default: {
-				super.onOptionsItemSelected(item);
-			}
-		}
-		
-		return super.onOptionsItemSelected(item);
-	}
-	
-	@Override
 	protected void refreshData() {
 		new DataLoader() {
 			
@@ -112,18 +93,13 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		currentPage = 1;
-		
-		OAuth oauth = FlickrUtils.getOAuthToken(getActivity());
-		
 		if (mEntityList.isEmpty()) {
 			woeid = getArguments().getString("woe_id");
 			
-			new LoadPhotostreamTask().execute(oauth);
+			new LoadPhotosInPlaceTask().execute();
 		}
 	}
 	
-	private int currentPage;
 	private String woeid;
 	
 	@Override
@@ -131,24 +107,11 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
 		return Photo.class;
 	}
 	
-	public class LoadPhotostreamTask extends AsyncTask<OAuth, Void, PlacesList> {
+	public class LoadPhotosInPlaceTask extends AsyncTask<Void, Void, Void> {
 
-		public Flickr getFlickrAuthed(String token, String secret) {
-			Flickr flick = FlickrUtils.getInstance();
-			
-            RequestContext requestContext = RequestContext.getRequestContext();
-            
-            OAuth auth = new OAuth();
-            auth.setToken(new OAuthToken(token, secret));
-            requestContext.setOAuth(auth);
-            
-            return flick;
-	    }
-		
         @Override
-        protected PlacesList doInBackground(OAuth... arg0) {
-        	OAuthToken token = arg0[0].getToken();
-            Flickr flick = getFlickrAuthed(token.getOauthToken(), token.getOauthTokenSecret());
+        protected Void doInBackground(Void... arg0) {
+            Flickr flick = new Flickr("153f33703432b91f607afa5dc195c23d", "da16906b3ce5d5e2");
             
             try {
             	Set<String> extras = new TreeSet<String>();
@@ -165,7 +128,7 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
             	searchParameters.setExtras(extras);
             	//searchParameters.setAccuracy(3); 
             	
-            	PhotoList photoList = flick.getPhotosInterface().search(searchParameters, 50, currentPage);
+            	PhotoList photoList = flick.getPhotosInterface().search(searchParameters, 50, 1);
             	
             	Storage storage = new Storage(getActivity());
             	
@@ -197,7 +160,7 @@ public class PhotosInPlaceFragment extends BaseEntityListFragment<Photo> {
             return null;
         }
 
-        protected void onPostExecute(PlacesList result) {
+        protected void onPostExecute(Void result) {
         	refreshData();
         }
         

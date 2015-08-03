@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo.util;
+package name.peterbukhal.android.skbkonturdemo.util;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;

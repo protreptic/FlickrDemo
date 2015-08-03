@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo.storage.model;
+package name.peterbukhal.android.skbkonturdemo.storage.model;
 
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;

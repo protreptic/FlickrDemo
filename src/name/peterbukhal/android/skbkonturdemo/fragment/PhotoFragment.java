@@ -1,4 +1,4 @@
-package org.javaprotrepticon.android.flickrdemo.fragment;
+package name.peterbukhal.android.skbkonturdemo.fragment;
 
 import android.support.v4.app.Fragment;
 
