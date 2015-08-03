@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlickrDemo</string>
+    <string name="app_name">SkbKonturDemo</string>
     <string name="search">Поиск</string>
     <string name="subtitle">[subtitle]</string>
     <string name="description">[description]</string>
