@@ -42,6 +42,9 @@ public class TopPlacesListFragment extends BaseEntityListFragment_v2<Place> {
 				holder.title.setText(place.getName());
 				holder.title.setTypeface(mRobotoCondensedBold);
 				
+				holder.subtitle.setText(place.getPhotoCount() != null ? "" + place.getPhotoCount() : "-");
+				holder.subtitle.setTypeface(mRobotoCondensedBold);
+				
 				holder.itemView.setOnClickListener(new OnClickListener() {
 					
 					@Override
